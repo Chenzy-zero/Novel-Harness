@@ -9,6 +9,7 @@ Novel Harness is the **tool repository**, not an individual novel. Install its s
 ```bash
 git clone https://github.com/Chenzy-zero/Novel-Harness.git
 cd Novel-Harness
+git checkout feat/initial-harness   # until PR #1 is merged
 python3 scripts/install.py /path/to/my-new-novel --dry-run
 python3 scripts/install.py /path/to/my-new-novel
 cd /path/to/my-new-novel
