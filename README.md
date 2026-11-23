@@ -82,19 +82,29 @@ Novel Harness 的思路是：**将小说事实、创作计划和任务状态持�
 
 ### 3.2 下载框架
 
-目前代码位于开发分支 `feat/initial-harness`，在 PR 合并前需要显式切换：
+推荐从 [GitHub Releases](https://github.com/Chenzy-zero/Novel-Harness/releases) 下载最新的 **Project Starter**。选择 ZIP 或 TAR.GZ 后，校验对应的 `SHA256SUMS.txt`，再将压缩包解压到小说仓库根目录。压缩包顶层直接包含 `AGENTS.md`、`workflow.md`、`.agents/skills/` 和小说项目目录，不会多套一层 `scaffold/`；目标仓库无需运行 `install.py`。
+
+如果目标仓库已有内容，请先解压到临时目录，再逐项合并缺少的文件；同名文件保留目标仓库版本并人工比较。不要直接覆盖已有小说正文、设定或配置。
+
+Linux/macOS 可在下载目录运行：
 
 ```bash
-git clone https://github.com/Chenzy-zero/Novel-Harness.git
-cd Novel-Harness
-git checkout feat/initial-harness
+sha256sum --check Novel-Harness-Project-Starter-v0.1.0-SHA256SUMS.txt
 ```
 
-### 3.3 初始化一本新小说
+Windows PowerShell 可按清单中的哈希值检查 `Get-FileHash <压缩包路径> -Algorithm SHA256` 的结果。Release 是早期预览版，使用前请阅读包内 `CHANGELOG.md`。
+
+### 3.3 从工具源码安装
+
+如果你要开发或修改 Novel Harness 本身，可以克隆工具仓库并运行安装器：
 
 将 `/path/to/my-novel` 替换成你的目标目录：
 
 ```bash
+# 获取工具源码
+git clone https://github.com/Chenzy-zero/Novel-Harness.git
+cd Novel-Harness
+
 # 先查看会安装哪些文件，不实际写入
 python3 scripts/install.py /path/to/my-novel --dry-run
 
