@@ -1,0 +1,23 @@
+name: 伏笔 THREAD
+description: 跨章节线索与读者承诺跟踪
+title: "[THREAD] "
+body:
+  - type: input
+    id: stable_id
+    attributes:
+      label: 稳定ID（THREAD-001）
+    validations:
+      required: true
+  - type: input
+    id: canonical_file
+    attributes:
+      label: 台账路径
+      placeholder: state/foreshadowing.md
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: 埋设章/状态/知情差/回收窗/关联角色与 ARC/BEAT
+    validations:
+      required: true

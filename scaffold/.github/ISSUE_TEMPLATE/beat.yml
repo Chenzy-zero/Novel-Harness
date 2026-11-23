@@ -1,0 +1,29 @@
+name: 剧情节点 BEAT（Story）
+description: 独立情节任务或转折，必须关联剧情弧
+title: "[BEAT] "
+body:
+  - type: input
+    id: stable_id
+    attributes:
+      label: 稳定ID（BEAT-001）
+    validations:
+      required: true
+  - type: input
+    id: parent
+    attributes:
+      label: 所属 ARC / 父 Issue
+    validations:
+      required: true
+  - type: input
+    id: canonical_file
+    attributes:
+      label: 节点文件
+      placeholder: outline/beats/BEAT-001.md
+    validations:
+      required: true
+  - type: textarea
+    id: state
+    attributes:
+      label: 当前状态/完成条件/证据章节/关联角色与伏笔
+    validations:
+      required: true
