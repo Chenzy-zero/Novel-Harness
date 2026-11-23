@@ -1,0 +1,22 @@
+name: 连续性审计 AUDIT
+description: 不一致、欠交代的NPC、重要设定冲突与未填坑
+title: "[AUDIT] "
+body:
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 冲突的正文证据/章节/档案路径
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: 对主线、人物、伏笔、状态的影响
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: 修复方案与需作者批准事项
+    validations:
+      required: true
