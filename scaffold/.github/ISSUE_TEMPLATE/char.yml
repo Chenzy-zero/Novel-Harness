@@ -1,0 +1,23 @@
+name: Character tracking
+ description: Track a significant character's canonical profile and changes
+ title: '[CHAR] '
+ labels: ['novel:char']
+ body:
+   - type: input
+     id: stable_id
+     attributes:
+       label: Stable character ID
+       placeholder: CHAR-001
+     validations:
+       required: true
+   - type: input
+     id: canonical_path
+     attributes:
+       label: Canonical profile path
+       placeholder: bible/characters/char-001.md
+     validations:
+       required: true
+   - type: textarea
+     id: evidence
+     attributes:
+       label: Chapter evidence and state changes
